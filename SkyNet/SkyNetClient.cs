@@ -12,13 +12,9 @@ namespace SkyNet
     {
         private readonly static TimeSpan PollingDurationDelay = TimeSpan.FromMinutes(8);
 
-        private readonly static string DarkSkyApiKey = "e6b3eee2b6968b36e92eb2b1a7d0a33a";
-
-        private readonly static double[] DarkSkyGeoLocatoin = new double[] { 47.8601, -122.2043 };
-
         private readonly CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
        
-        private DarkSkyService DarkSkyService = new DarkSkyService(DarkSkyApiKey);
+        private DarkSkyService DarkSkyService = new DarkSkyService(Secrets.DarkSkyApiKey);
 
         private WeatherReport WeatherReport = null;
 
@@ -51,7 +47,7 @@ namespace SkyNet
         {
             try
             {
-                DarkSkyResponse darkSkyResponse = await DarkSkyService.GetForecast(DarkSkyGeoLocatoin[0], DarkSkyGeoLocatoin[1]);
+                DarkSkyResponse darkSkyResponse = await DarkSkyService.GetForecast(Secrets.GeoLocation.Latitude, Secrets.GeoLocation.Longitude);
 
                 if (darkSkyResponse.IsSuccessStatus)
                 {

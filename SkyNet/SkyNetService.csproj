@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Contracts\DataContracts\Daily.cs" />
     <Compile Include="Contracts\ServiceContracts\ISkyNetServiceContract.cs" />
+    <Compile Include="Secrets.cs" />
     <Compile Include="Utilities\ExtensionMethods.cs" />
     <Compile Include="SkyNetClient.cs" />
     <Compile Include="Service\Program.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Contracts\ServiceContracts\SkyNetServiceContract.cs" />
     <Compile Include="Contracts\DataContracts\WeatherReport.cs" />
     <Compile Include="Service\WebSelfHostStartup.cs" />
+    <Compile Include="Utilities\GeoLocation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
