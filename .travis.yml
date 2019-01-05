@@ -1,2 +1,3 @@
 language: csharp
 solution: SkyNet.sln
+dotnet: 2.0.0
