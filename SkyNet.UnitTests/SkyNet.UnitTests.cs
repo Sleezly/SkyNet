@@ -3,10 +3,10 @@
 namespace SkyNet.UnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class SkyNetTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void BVT()
         {
             SkyNetClient skyNetClient = new SkyNetClient();
 
