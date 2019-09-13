@@ -33,11 +33,11 @@ namespace SkyNet
                     return "weather-fog";
 
                 case Icon.PartlyCloudyDay:
-                    return "weather-partlycloudy";
+                    return "weather-partly-cloudy";
 
                 case Icon.PartlyCloudyNight:
-                    return "cloud";
-
+                    return "weather-night-partly-cloudy";
+                    
                 default:
                     return "error";
             }
